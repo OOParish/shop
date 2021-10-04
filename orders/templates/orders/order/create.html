@@ -1,0 +1,41 @@
+{% extends "shop/base.html" %}
+{% block title %}Checkout{% endblock %}
+{% block content %}
+    <h1 class="funny-title section-title" align="center">CHECKOUT</h1>
+<div class="row justify-content-center">
+    <div class="col-md-auto">
+    <div class="container1">
+      <h4>Корзина:
+          {% with total_items=cart|length %}
+        <span class="price" style='color:black'>
+          <i class="fa fa-shopping-cart"></i>
+          <b>{{ total_items }}</b>
+        </span>
+          {% endwith %}
+      </h4>
+        {% for item in cart %}
+      <p><a href="{{ item.product.get_absolute_url }}">{{ item.product.name }}</a> <span class="price">{{ item.total_price }} грн.</span></p>
+        {% endfor %}
+      <hr>
+      <p><strong>Всего:</strong> <span class="price" style="color:black"><b>{{ cart.get_total_price }} грн</b></span></p>
+    </div>
+    </div>
+
+  <div class="col col-lg-4">
+    <div class="container1">
+      <form action="." method="post" class="order-form">
+        <div class="row">
+          <div class="col-50">
+            <h3>Укажите информацию</h3>
+                {{ form.as_p }}
+             <input type="submit" onk value="Continue to checkout" class="btn btn-danger">
+            {% csrf_token %}
+          </div>
+            </label>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

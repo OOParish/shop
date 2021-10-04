@@ -1,0 +1,40 @@
+{% extends "shop/base.html" %}
+{% load static %}
+{% block title %}
+    {% if category %}{{ category.title }}{% else %}Products{% endif %}
+{% endblock %}
+{% block content %}
+    <div class="product-detail">
+        <h1 class="funny-title section-title" align="center"><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h1>
+
+   <main class="container">
+
+      <!-- Left Column / Headphones Image -->
+      <div class="left-column">
+        <img data-image="red" class="active" src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}">
+      </div>
+
+
+      <!-- Right Column -->
+      <div class="right-column">
+
+        <!-- Product Description -->
+        <div class="product-description">
+          <span1>{{ product.category }}</span1>
+          <h1>{{ product.name }}</h1>
+          <p>{{ product.description }}</p>
+        </div>
+
+        <!-- Product Pricing -->
+        <div class="product-price">
+          <span class="price">Цена: {{ product.price }} грн.</span>
+          <form action="{% url 'cart:cart_add' product.id %}" method="post" >
+            {{ cart_product_form }}
+            <input class=" btn btn-success" type="submit" value="В корзину">
+               {% csrf_token %}
+          </form>
+        </div>
+      </div>
+   </main>
+    </div>
+{% endblock %}

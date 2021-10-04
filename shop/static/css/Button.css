@@ -1,0 +1,97 @@
+.buttoDD,
+.buttoDD::before,
+.buttoDD::after,
+.buttoDD a,
+.buttoDD a::before,
+.buttoDD a::after
+{
+  transition: all ease .5s;
+}
+
+.buttoDD{
+  color: #000000;
+  background: #DCDCDC;
+  position: relative;
+  left: 78%;
+  display: inline-block;
+  padding: 0.3em;
+  margin: 1em;
+  border: solid 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.buttoDD:hover
+{
+  box-shadow: 0 0 5em .5em rgba(,50,150,0.5);
+}
+
+.buttoDD a
+{
+  display: inline-block;
+  width: 100%;
+  padding: 0.6em 2em;
+}
+
+.buttoDD:hover a
+{
+  background-color: #112;
+  color: #8B0000;
+}
+
+.buttoDD::before,
+.buttoDD::after,
+.buttoDD a::before,
+.buttoDD a::after
+{
+  content: '';
+  position: absolute;
+  border: 1px;
+}
+
+.buttoDD::before,
+.buttoDD a::before
+{
+  border-style: solid none;
+}
+
+.buttoDD::before,
+.buttoDD a::after{
+  left: 0;
+  top: -0.4em;
+  width: 100%;
+  height: calc(100% + 0.8em);
+}
+
+.buttoDD::after,
+.button a::after
+{
+  border-style: none solid;
+}
+
+.buttoDD::after,
+.buttoDD a::before
+{
+  top: 0;
+  left: -0.4em;
+  height: 100%;
+  width: calc(100% + 0.8em);
+}
+
+.buttoDD:hover::after,
+.buttoDD:hover a::after
+{
+  transform: scaleY(0);
+}
+
+.buttoDD:hover::before,
+.buttoDD:hover a::before
+{
+  transform: scaleX(0);
+}
+
+.buttoDD:hover a::after,
+.buttoDD:hover a::before
+{
+  opacity: 0;
+}

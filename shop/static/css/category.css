@@ -1,0 +1,157 @@
+body {
+  background: #c4c7cb;
+  background-image: -webkit-radial-gradient(cover, #fff, #d1d1d1);
+  background-image: -moz-radial-gradient(cover, #e8eaec, #a4a8ae);
+  background-image: -o-radial-gradient(cover, #e8eaec, #a4a8ae);
+  background-image: radial-gradient(cover, #e8eaec, #a4a8ae);
+}
+
+html {
+  min-height: 100%;
+
+}
+
+.Navigation {
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 12%;
+  left: 49%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+
+}
+
+.Navigation li {
+  height: auto;
+  width: 250px;
+  float: left;
+  text-align: center;
+  list-style: none;
+  font: 12px "Bonveno", "Century Gothic";
+  padding: 0;
+  margin: 0;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  margin-left: 10px;
+}
+
+.Navigation a {
+  padding: 13px;
+  text-decoration: none;
+  color: #333;
+  text-shadow: 0 1px #fff;
+  display: block;
+  font: 20px "Bonveno", "Century Gothic";
+}
+.Navigation li ul {
+  display: none;
+  height: auto;
+  margin-left: -11px;
+  padding: 0;
+}
+
+.Navigation li:hover ul {
+  display: block;
+}
+
+.navbar li ul li {
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+
+.Navigation li:hover,
+a:hover {
+  background: #e8e8e8;
+}
+.area {
+  text-align: center;
+  font-size: 6.5em;
+  color: #0000000;
+  letter-spacing: -7px;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: blur .9s ease-out infinite;
+  text-shadow: 0px 0px 5px red, 0px 0px 7px green;
+}
+
+@keyframes blur {
+  from {
+    text-shadow:0px 0px 5px red,
+      0px 0px 10px #fff,
+      0px 0px 25px #fff,
+      0px 0px 25px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px #fff,
+      0px 0px 50px green,
+      0px 0px 150px #7B96B8,
+      0px 10px 100px #7B96B8,
+      0px -10px 100px #7B96B8;
+  }
+}
+@import "https://fonts.googleapis.com/css?family=Russo+One";
+h1.funny-title{border-top:5px solid #2F4F4F;
+border-bottom:5px solid #2F4F4F;
+font-size:70px;
+text-align:center;
+margin-top:115px;
+margin-bottom:5px;
+text-transform:uppercase;
+font-family:'Russo One',sans-serif;
+font-weight:900;
+letter-spacing:8px
+}
+.funny-title a:hover {
+
+    background-color: #11ffee00; /* Цвет фона */
+   }
+@-webkit-keyframes move-background {
+0%{background-position:-300px 0}
+100%{background-position:300px -300px}
+}
+@-moz-keyframes move-background {
+0%{background-position:-300px 0}
+100%{background-position:300px -300px}
+}
+@keyframes move-background {
+0%{background-position:-300px 0}
+100%{background-position:300px -300px}
+}
+.section-title{-webkit-animation-play-state:running;-moz-animation-play-state:running;animation-play-state:running;color:transparent;background:url(https://obninsksite.ru/assets/theme/images/blog/square.svg) no-repeat #00CED1;background-size:cover;-webkit-text-fill-color:transparent;-moz-text-fill-color:transparent;-webkit-background-clip:text;-moz-background-clip:text;background-clip:text;-webkit-animation:move-background 20s infinite linear alternate;-moz-animation:move-background 20s infinite linear alternate;animation:move-background 20s infinite linear alternate}
+.card {
+  box-shadow: 0 40px 80px 0 rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  height: auto;
+  margin: auto;
+  margin-top:15px;
+  margin-bottom:50px;
+  text-align: center;
+  font-family: arial;
+  border: 2px solid red
+}
+
+.price {
+  color: red;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
